@@ -1,6 +1,7 @@
 PageTurns::Application.routes.draw do
   match '/welcome' => 'users#welcome'
   match '/login'   => 'home#login', via: :post, defaults: { format: 'json' }
+  match '/add'     => 'home#add', via: :post, defaults: { format: 'json' }
   authenticated :user do
     root :to => 'home#index'
   end
