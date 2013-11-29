@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   rolify
+  uniquify :token, length: 48
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable,
   # :lockable, :timeoutable and :omniauthable
